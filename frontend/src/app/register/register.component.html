@@ -1,0 +1,35 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field >
+  
+      <input matInput placeholder="First Name" formControlName="firstName">
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field >
+
+      <input matInput placeholder="Last Name"  formControlName="lastName">
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field >
+
+      <input matInput placeholder="Email"  formControlName="email">
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field >
+
+      <input matInput placeholder="Password"  formControlName="password">
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field >
+      <input matInput placeholder="Confirm Password"  formControlName="confirmPassword">
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+    <br>
+    <span *ngIf="form.errors?.mismatchedFields">Passwords do not match</span>
+    <br>
+    <button mat-raised-button >Register</button>
+
+</form>
